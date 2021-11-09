@@ -46,6 +46,7 @@ while main_loop_flag do
     end
   end
 
+  # Check answer
   if input_number == answer
     puts "#{question_player.name}: YES! You are correct."
   else
@@ -53,6 +54,7 @@ while main_loop_flag do
     lives = answer_player.decrement_lives
   end
 
+  # Exit if someone has lost
   if lives == 0
     puts "#{question_player.name} wins with a score of #{question_player.lives}/#{NUMBER_OF_LIVES}"
     puts "----- GAME OVER -----"
@@ -60,6 +62,7 @@ while main_loop_flag do
     break
   end
 
+  # Update turns
   player_1.update_turn
   player_2.update_turn
 
